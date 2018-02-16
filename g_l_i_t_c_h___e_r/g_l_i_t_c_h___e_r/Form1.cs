@@ -21,18 +21,24 @@ namespace g_l_i_t_c_h___e_r
             System.Threading.Thread.Sleep(2000);
             InitializeComponent();
             t.Abort();
+            
         }
 
         public void w_e_l_c_o_m_eH_u_man()
         {
             Application.Run(new Ethereal_Splash());
         }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pb_bg.Size = Size;
+            pb_bg.Location = new Point(-1, -1);
+            pb_bg.SendToBack();
             CenterToScreen();
             button2.Visible = false;
             richTextBox1.Visible = false;
+            Activate();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -130,6 +136,9 @@ namespace g_l_i_t_c_h___e_r
             }
         }
 
-
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
