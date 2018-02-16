@@ -28,22 +28,23 @@ namespace g_l_i_t_c_h___e_r
         {
             Application.Run(new Ethereal_Splash());
         }
-        
+
+        byte[] _globalEther;
+        string globalDir;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox1.Visible = false;
             pb_bg.Size = Size;
             pb_bg.Location = new Point(-1, -1);
             pb_bg.SendToBack();
             CenterToScreen();
-            //button2.Visible = false;
-            //richTextBox1.Visible = false;
             Activate();
             button3.Visible = false;
             button2.Visible = false;
 
             ToolStripMenuItem s = new ToolStripMenuItem(
-                "Save image...",
+                "ＳＥＩＶ　ＩＭＡＴＪＥ　ークボ .  .  .",
                 null,//VIL BE ADDED L8R
                 new EventHandler(SubmenuItem_Click));
 
@@ -52,15 +53,24 @@ namespace g_l_i_t_c_h___e_r
         private void SubmenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("S A V E I N G K . . _--->->___");
+            SaveFileDialog _sfd = new SaveFileDialog();
+
+            _sfd.Filter = "Ｂｅｌｏｖｅｄ　ｅｔｈｅｒ　な猿ポ | *.jpg";
+
+
+            if (_sfd.ShowDialog()==DialogResult.OK)
+            {
+                var fs = new FileStream(_sfd.FileName, FileMode.Create, FileAccess.Write);
+
+                fs.Write(_globalEther, 0, _globalEther.Length); //append dat shit and create the image
+                fs.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image != null)
                 pictureBox1.Image.Dispose();
-            //label1.Visible = true;
-
-            //label2.Text = "Loading the file...";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 choosenFile = openFileDialog1.FileName;
@@ -118,7 +128,6 @@ namespace g_l_i_t_c_h___e_r
                 button2.Visible = true;
                 */
         }
-        string globalDir;
         private void export()
         {
             DirectoryInfo info = Directory.GetParent(choosenFile);
@@ -138,13 +147,14 @@ namespace g_l_i_t_c_h___e_r
             for (long lIdx = 0; lIdx < lfileLength; lIdx++)
             {
                 btFile[lIdx] = binReader.ReadByte();
+                
             }
             binReader.Close();
-           // MessageBox.Show("dsds "+fileName + " "+btFile.Length );
             try
             {
                
                 btFile = ImageBend(btFile);
+                _globalEther = btFile;
                 var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
                 
                 fs.Write(btFile, 0, btFile.Length); //append dat shit and create the image
@@ -159,6 +169,7 @@ namespace g_l_i_t_c_h___e_r
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             button3.Visible = true;
             button2.Visible = true;
+            pictureBox1.Visible = true;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -216,6 +227,7 @@ namespace g_l_i_t_c_h___e_r
             pictureBox1.Image = null;
             globalDir = "";
             button3.Visible = false;
+            pictureBox1.Visible = false;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
