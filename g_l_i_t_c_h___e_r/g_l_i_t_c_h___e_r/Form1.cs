@@ -41,6 +41,17 @@ namespace g_l_i_t_c_h___e_r
             Activate();
             button3.Visible = false;
             button2.Visible = false;
+
+            ToolStripMenuItem s = new ToolStripMenuItem(
+                "Save image...",
+                null,//VIL BE ADDED L8R
+                new EventHandler(SubmenuItem_Click));
+
+            contextMenuStrip1.Items.Add(s);
+   }
+        private void SubmenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("S A V E I N G K . . _--->->___");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -206,5 +217,15 @@ namespace g_l_i_t_c_h___e_r
             globalDir = "";
             button3.Visible = false;
         }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
+     
     }
 }
