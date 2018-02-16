@@ -159,17 +159,14 @@ namespace g_l_i_t_c_h___e_r
                 
                 fs.Write(btFile, 0, btFile.Length); //append dat shit and create the image
                 fs.Close();
+
+                pictureBox1.Image = Image.FromFile(fileName);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                button3.Visible = true;
+                button2.Visible = true;
+                pictureBox1.Visible = true;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(""+ ex);
-            }
-            
-            pictureBox1.Image = Image.FromFile(fileName);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            button3.Visible = true;
-            button2.Visible = true;
-            pictureBox1.Visible = true;
+            catch{}
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -237,7 +234,5 @@ namespace g_l_i_t_c_h___e_r
                 contextMenuStrip1.Show(Cursor.Position);
             }
         }
-
-     
     }
 }
