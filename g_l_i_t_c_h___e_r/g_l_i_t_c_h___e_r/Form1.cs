@@ -36,15 +36,17 @@ namespace g_l_i_t_c_h___e_r
             pb_bg.Location = new Point(-1, -1);
             pb_bg.SendToBack();
             CenterToScreen();
-            button2.Visible = false;
-            richTextBox1.Visible = false;
-            label2.BackColor = label1.BackColor = Color.LightPink;
-            label2.ForeColor = label1.ForeColor = Color.Teal;
+            //button2.Visible = false;
+            //richTextBox1.Visible = false;
             Activate();
+            button3.Visible = false;
+            button2.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (pictureBox1.Image != null)
+                pictureBox1.Image.Dispose();
             //label1.Visible = true;
 
             //label2.Text = "Loading the file...";
@@ -105,13 +107,15 @@ namespace g_l_i_t_c_h___e_r
                 button2.Visible = true;
                 */
         }
+        string globalDir;
         private void export()
         {
             DirectoryInfo info = Directory.GetParent(choosenFile);
             string parent = info.ToString() + @"\exported_1.bmp";
+            globalDir = parent;
             ByteArrayToFile(parent);
         }
-
+        
         private void ByteArrayToFile(string fileName)
         {
             string strPath = Path.GetFullPath(choosenFile);
@@ -128,16 +132,22 @@ namespace g_l_i_t_c_h___e_r
            // MessageBox.Show("dsds "+fileName + " "+btFile.Length );
             try
             {
+               
                 btFile = ImageBend(btFile);
-                using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write))
-                {
-                    fs.Write(btFile, 0, btFile.Length); //append dat shit and create the image
-                }
+                var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+                
+                fs.Write(btFile, 0, btFile.Length); //append dat shit and create the image
+                fs.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(""+ ex);
             }
+            
+            pictureBox1.Image = Image.FromFile(fileName);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            button3.Visible = true;
+            button2.Visible = true;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -179,9 +189,22 @@ namespace g_l_i_t_c_h___e_r
             return _newBytemap;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+            if (pictureBox1.Image != null)
+                pictureBox1.Image.Dispose();
+
+            ByteArrayToFile(globalDir);
+        }
+        
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (pictureBox1.Image != null)
+                pictureBox1.Image.Dispose();
+            pictureBox1.Image = null;
+            globalDir = "";
+            button3.Visible = false;
         }
     }
 }
