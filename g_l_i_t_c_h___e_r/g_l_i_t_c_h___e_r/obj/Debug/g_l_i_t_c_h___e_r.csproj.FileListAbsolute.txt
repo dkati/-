@@ -1,0 +1,11 @@
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\bin\Debug\g_l_i_t_c_h___e_r.exe.config
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\bin\Debug\g_l_i_t_c_h___e_r.exe
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\bin\Debug\g_l_i_t_c_h___e_r.pdb
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.Form1.resources
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.Properties.Resources.resources
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.exe
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.pdb
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\github\g-l-i-t-c-h-e-r-__A_r-t\g_l_i_t_c_h___e_r\g_l_i_t_c_h___e_r\obj\Debug\g_l_i_t_c_h___e_r.Ethereal_Splash.resources

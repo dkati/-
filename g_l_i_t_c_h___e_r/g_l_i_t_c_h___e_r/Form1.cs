@@ -16,7 +16,16 @@ namespace g_l_i_t_c_h___e_r
         string choosenFile;
         public Form1()
         {
+            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(w_e_l_c_o_m_eH_u_man));
+            t.Start();
+            System.Threading.Thread.Sleep(2000);
             InitializeComponent();
+            t.Abort();
+        }
+
+        public void w_e_l_c_o_m_eH_u_man()
+        {
+            Application.Run(new Ethereal_Splash());
         }
 
         private void Form1_Load(object sender, EventArgs e)
