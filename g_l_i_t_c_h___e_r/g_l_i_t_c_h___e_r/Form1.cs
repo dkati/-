@@ -38,6 +38,8 @@ namespace g_l_i_t_c_h___e_r
             CenterToScreen();
             button2.Visible = false;
             richTextBox1.Visible = false;
+            label2.BackColor = label1.BackColor = Color.LightPink;
+            label2.ForeColor = label1.ForeColor = Color.Teal;
             Activate();
         }
 

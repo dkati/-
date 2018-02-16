@@ -42,9 +42,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(71, 12);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 25);
+            this.button1.Size = new System.Drawing.Size(205, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "ＰＡＲＡＤＩＳＥ　ヿドヿ";
             this.button1.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 62);
+            this.label1.Location = new System.Drawing.Point(12, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
@@ -75,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 46);
+            this.label2.Location = new System.Drawing.Point(12, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 3;
