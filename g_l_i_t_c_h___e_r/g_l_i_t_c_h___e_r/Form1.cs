@@ -24,7 +24,7 @@ namespace g_l_i_t_c_h___e_r
             t.Abort();
             
         }
-
+ 
         public void w_e_l_c_o_m_eH_u_man()
         {
             Application.Run(new Ethereal_Splash());
